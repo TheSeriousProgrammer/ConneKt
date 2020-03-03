@@ -97,7 +97,20 @@ public class requests {
 
     static OkHttpClient httpClient ;
 
+    static public String justARequest(String url){
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
 
+        try {
+            Response response = httpClient.newCall(request).execute();
+            return response.body().string();
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+            return null;
+        }
+    }
 
     static public int loginRequest(String regNo,String passKey){
 
@@ -215,14 +228,15 @@ public class requests {
 
         //httpClient = safeSelfSignedOkhttpClient();
         httpClient = getUnsafeOkHttpClient();
-        //logoutRequest("18BCE7176");
+        /*logoutRequest("18BCE7176");
         System.out.println();
         System.out.println();
         loginRequest("18BCE7176","olalalalala");
         System.out.println();
         System.out.println();
         logoutRequest("18BCE7176");
-
+        */
+        System.out.println(justARequest("https://raw.githubusercontent.com/Chidhambararajan/ConneKt/master/releases/latest"));
     }
 
     public static OkHttpClient getUnsafeOkHttpClient() {
@@ -270,6 +284,7 @@ public class requests {
         }
         return null;
     }
+
 
 
     public static OkHttpClient safeSelfSignedOkhttpClient(){
