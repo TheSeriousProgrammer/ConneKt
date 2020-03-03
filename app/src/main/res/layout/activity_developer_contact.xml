@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286"
+        app:layout_constraintVertical_bias="0.138"
         app:srcCompat="@drawable/github" />
 
     <ImageView
@@ -27,8 +27,36 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.694"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.068"
         app:srcCompat="@drawable/insta1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="164dp"
+        android:layout_height="58dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="#050F4A"
+        android:onClick="upiRedirect"
+        android:text="Buy me a Coffee\nAnd Support me!"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="172dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="36dp"
+        android:onClick="upiRedirect"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/coffee2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,8 +26,13 @@ public class developerContact extends AppCompatActivity {
     public void instaRedired(View view){
 
         Intent openURL = new Intent(Intent.ACTION_VIEW);
-        openURL.setData(Uri.parse("https://instagram.com/chidhambararajan_code_machine?igshid=2rgbxa0etjww"));
+        openURL.setData(Uri.parse("https://www.instagram.com/code_vectors/"));
         startActivity(openURL);
 
+    }
+
+    public void upiRedirect(View view){
+        Intent callUpi = new Intent(Intent.ACTION_VIEW,Uri.parse("upi://pay?pa=7338955561@upi&pn=Chidhambararajan&tn=Contribution+for+ConneKt+App&am=15&INR"));
+        startActivity(callUpi);
     }
 }

@@ -13,7 +13,7 @@
         android:layout_width="229dp"
         android:layout_height="75dp"
         android:fontFamily="@font/assistant_semibold"
-        android:text="ConnecKt"
+        android:text="ConneKt"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="36sp"
@@ -159,10 +159,25 @@
         android:text="Student Developer Contact"
         android:textColor="#FFFFFF"
         android:textSize="10sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@+id/login" />
+
+    <Button
+        android:id="@+id/updateChecker"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="#004D40"
+        android:fontFamily="@font/assistant_semibold"
+        android:onClick="updateJump"
+        android:text="Update Now"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

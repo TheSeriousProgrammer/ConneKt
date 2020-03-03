@@ -1,9 +1,17 @@
 package com.vitap.wified;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
@@ -133,6 +141,7 @@ public class login extends AppCompatActivity {
         editor.putBoolean("status",true);
         editor.putString("lastRegNo",registration_no);
         editor.commit();
+
     }
 
     public void multiLogin(){
@@ -206,10 +215,6 @@ public class login extends AppCompatActivity {
             next.putExtra("regNo",registration_no);
             startActivity(next);
         }
-
-    }
-
-    public void checkForUpdates(){
 
     }
 }

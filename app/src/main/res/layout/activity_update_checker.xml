@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".updateChecker">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="324dp"
+        android:layout_height="136dp"
+        android:fontFamily="monospace"
+        android:text="Checking for Update"
+        android:textAlignment="center"
+        android:textColor="#011319"
+        android:textSize="36sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="164dp"
+        android:layout_height="152dp"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.569" />
+
+    <Button
+        android:id="@+id/initiateUpdate"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="#1976D2"
+        android:onClick="startNewApkDownload"
+        android:text="Yes , I wanna Update"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

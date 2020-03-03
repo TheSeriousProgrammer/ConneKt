@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button login , signout, smartLogout, timerLogout;
+    Button login , signout, smartLogout, timerLogout ,updater;
     EditText registration_id ,password;
     Switch autoSave ;
     String regNo , pssKey ;
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Initializing widgets
+        updater = findViewById(R.id.updateChecker);
         status = findViewById(R.id.textView3);
         login = findViewById(R.id.login) ;
         signout = findViewById(R.id.signout);
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         smartLogout.setVisibility(View.INVISIBLE);
         timerLogout.setVisibility(View.INVISIBLE);
+        updater.setVisibility(View.INVISIBLE);
 
         if(sharedPref.getString("lastRegNo","").equals("")){
             SharedPreferences.Editor editor = sharedPref.edit();
@@ -200,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
                 signout.setVisibility(View.INVISIBLE);
                 smartLogout.setVisibility(View.INVISIBLE);
                 timerLogout.setVisibility(View.INVISIBLE);
+                updater.setVisibility(View.INVISIBLE);
 
             }
         });
@@ -215,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
                 signout.setVisibility(View.VISIBLE);
                 smartLogout.setVisibility(View.VISIBLE);
                 timerLogout.setVisibility(View.VISIBLE);
+                updater.setVisibility(View.VISIBLE);
                 if(!sharedPref.getString("regNo","").equals("")) {
                     registration_id.setText(sharedPref.getString("regNo", ""));
                 }
@@ -237,5 +241,9 @@ public class MainActivity extends AppCompatActivity {
     public void contact(View view){
         Intent next = new Intent(this,developerContact.class);
         startActivity(next);
+    }
+
+    public void updateJump(View view){
+        startActivity(new Intent(this,updateChecker.class));
     }
 }

@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/wifi"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".developerContact"></activity>
+        <activity android:name=".updateChecker"></activity>
+        <activity android:name=".developerContact" />
         <activity android:name=".timerLogout" />
         <activity android:name=".smartLogout" />
         <activity android:name=".logout" />
