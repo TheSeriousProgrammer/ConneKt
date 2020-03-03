@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".smartLogout">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="293dp"
+        android:layout_height="75dp"
+        android:fontFamily="@font/allerta"
+        android:text="SMART LOGOUT"
+        android:textAlignment="viewStart"
+        android:textColor="#070000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="295dp"
+        android:layout_height="321dp"
+        android:fontFamily="@font/abeezee"
+        android:text="The feature works by constantly monitoring your wifi signal strength\n\nIf the signal strengh drops to  20%, a logout request will be sent from your id to prevent your ID's lock out\n\nThe feature assumes that you are leaving the network when the signal strength drops below the threshold"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/activate"
+        android:layout_width="241dp"
+        android:layout_height="42dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="#44AC33"
+        android:onClick="activate"
+        android:text="I Understood, Activate"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.911" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/allerta"
+        android:text="Current Threshold : 20%"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/activate"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.282" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="288dp"
+        android:layout_height="26dp"
+        android:max="7"
+        android:progress="2"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+</androidx.constraintlayout.widget.ConstraintLayout>
