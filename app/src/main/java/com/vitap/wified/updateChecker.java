@@ -64,7 +64,7 @@ public class updateChecker extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                field.setText("Cheers , Your App is UptoDate");
+                field.setText("Cheers!! Your App is UptoDate");
                 field.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.INVISIBLE);
                 initiateUpdate.setVisibility(View.INVISIBLE);
