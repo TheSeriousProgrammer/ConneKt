@@ -32,7 +32,8 @@ public class developerContact extends AppCompatActivity {
     }
 
     public void upiRedirect(View view){
-        Intent callUpi = new Intent(Intent.ACTION_VIEW,Uri.parse("upi://pay?pa=7338955561@upi&pn=Chidhambararajan&tn=Contribution+for+ConneKt+App&am=15&INR"));
-        startActivity(callUpi);
+        Intent next = new Intent(this,upiPay.class);
+        //Intent callUpi = new Intent(Intent.ACTION_VIEW,Uri.parse("upi://pay?pa=7338955561@upi&pn=Chidhambararajan&tn=Contribution+for+ConneKt+App&am=15&INR"));
+        startActivity(next);
     }
 }
