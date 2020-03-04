@@ -59,6 +59,14 @@ public class login extends AppCompatActivity {
 
     }
 
+    public boolean isInternetConnected() {
+        try {
+            String command = "ping -c 1 google.com";
+            return (Runtime.getRuntime().exec(command).waitFor() == 0);
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
     public void submitRequest(){
         //request_thread.start();
@@ -118,6 +126,13 @@ public class login extends AppCompatActivity {
     }
 
     public void success(){
+
+        System.out.println("Waiting for internet connection to be established");
+        while(!isInternetConnected());//Waiting Till internet starts to show up
+        System.out.println("Internet connection to be established");
+        //It takes time for sophos to perfom the operation even after receiving the request, that's why this procedure
+
+
         Runnable task = new Runnable() {
             @Override
             public void run() {

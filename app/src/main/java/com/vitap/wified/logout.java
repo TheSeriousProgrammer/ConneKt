@@ -49,7 +49,22 @@ public class logout extends AppCompatActivity {
 
     }
 
+    public boolean isInternetConnected() {
+        try {
+            String command = "ping -c 1 google.com";
+            return (Runtime.getRuntime().exec(command).waitFor() == 0);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public void success(){
+
+        System.out.println("Waiting till internet connection is terminated");
+        while(isInternetConnected());//Waiting till internet connection is stopped
+        //It takes time for sophos to perfom the operation even after receiving the request, that's why this procedure
+        System.out.println("Internet connection succefully terminated");
+
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
