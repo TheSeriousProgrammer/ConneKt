@@ -124,7 +124,7 @@
         android:id="@+id/smartLogout"
         android:layout_width="130dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="128dp"
         android:background="@drawable/roundbutton"
         android:backgroundTint="#1194F6"
@@ -150,19 +150,19 @@
 
     <Button
         android:id="@+id/contact"
-        android:layout_width="176dp"
-        android:layout_height="29dp"
+        android:layout_width="184dp"
+        android:layout_height="38dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/roundbutton"
         android:backgroundTint="#39AC3E"
         android:onClick="contact"
-        android:text="Student Developer Contact"
+        android:text="Contact / Bug report"
         android:textColor="#FFFFFF"
-        android:textSize="10sp"
+        android:textSize="13sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/login" />
 
     <Button

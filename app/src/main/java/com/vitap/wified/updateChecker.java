@@ -38,7 +38,7 @@ public class updateChecker extends AppCompatActivity {
         if (result!=null) {
             String res[] = result.split(" ");
             System.out.println(result);
-            if (!res[0].equals("2.1.3")) {
+            if (!res[0].equals("2.2.0")) {
                 url = res[1];
                 showUpdateMessage();
             }
