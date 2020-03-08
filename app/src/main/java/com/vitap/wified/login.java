@@ -30,7 +30,7 @@ public class login extends AppCompatActivity {
     String registration_no;
     Button login ;
     Boolean Autosave;
-    Boolean Mode = true ;
+    int Mode ;
     /*
         returns 3 when login succefull
         returns 2 login limit exceeded condition
@@ -136,7 +136,7 @@ public class login extends AppCompatActivity {
         Runnable task = new Runnable() {
             @Override
             public void run() {
-                login.setVisibility(View.INVISIBLE);
+                login.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.INVISIBLE);
                 status.setText("Logged in as " + registration_no.trim());
                 success.setVisibility(View.VISIBLE);
@@ -156,6 +156,8 @@ public class login extends AppCompatActivity {
         editor.putBoolean("status",true);
         editor.putString("lastRegNo",registration_no);
         editor.commit();
+        login.setText("Enable USB Tethering");
+        Mode =2 ;
 
     }
 
@@ -168,7 +170,7 @@ public class login extends AppCompatActivity {
                 status.setText("Multiple Devices Login Error");
                 failed.setVisibility(View.VISIBLE);
                 login.setText("Try Logging out");
-                Mode  = false;
+                Mode  = 0;
                 //failed.setVisibility(View.VISIBLE);
             }
         };
@@ -215,14 +217,19 @@ public class login extends AppCompatActivity {
                 failed.setVisibility(View.VISIBLE);
 
                 login.setText("retry");
-                Mode  = true ;
+                Mode  = 1 ;
             }
         };
         runOnUiThread(task);
     }
 
     public void retry(View view){
-        if(Mode){
+        if(Mode==2){
+            Intent intent = new Intent();
+            intent.setClassName("com.android.settings", "com.android.settings.TetherSettings");
+            startActivity(intent);
+        }
+        else if(Mode==1){
             submitRequest();
         }
         else{
